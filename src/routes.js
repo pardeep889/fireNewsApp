@@ -7,12 +7,13 @@ import VideoArticle from './components/Articles/Videos/Video/index';
 import NewsMain from './components/Articles/News/Main/index';
 import VideosMain from './components/Articles/Videos/Main/index';
 import SignIn from './components/signin/signin';
-class Routes extends Component {
+import Dashboard from "./components/Dashboard/dashboard";
 
+const Routes = (props) => {
 
-    render() {
+        // console.log(props);
         return (
-            <Layout>
+            <Layout user = {props.user}>
                 <Switch>
                     <Route path='/' exact component ={Home} />
                     <Route path='/news' exact component ={NewsMain} />
@@ -20,11 +21,11 @@ class Routes extends Component {
                     <Route path='/videos/:id' exact component ={VideoArticle} />
                     <Route path='/videos' exact component ={VideosMain} />
                     <Route path = '/sign-in' exact component ={SignIn}/>
+                    <Route path='/dashboard' exact component={Dashboard}/>
                 </Switch>
             </Layout>
        
         );
     }
-}
 
 export default Routes;

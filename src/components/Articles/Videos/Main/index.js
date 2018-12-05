@@ -1,6 +1,7 @@
 import React from 'react';
 import VideosList from '../../../Widget/VideosList/VideosList';
 
+
 const VideosMain = () => {
     return(
         <VideosList

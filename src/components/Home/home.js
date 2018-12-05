@@ -31,4 +31,3 @@ const Home = () => {
 };
 
 export default Home;
-//nba with fire base 6
